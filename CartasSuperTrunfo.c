@@ -11,6 +11,9 @@ int main(){
 
     //Acrecentando as variáveis.
 
+    Printf("Bem vindo(a) ao Desafio Cartas Super Trunfo!")
+    Printf("Para comerçamos, escolha um estado, que são representados por letras de 'A' a 'D'. ");
+
     return 0;
 
 }
