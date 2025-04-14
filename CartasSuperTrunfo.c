@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-int main(){                                                                     //Acrescentando as variáveis
+int main(){                             //Acrescentando as variáveis
     char estado[10];
     char codigo[10];
     char nome_cidade[20];
     float populacao;
     float area;
     float PIB;
-    float pontos_turisticos;
+    double pontos_turisticos;
     char resposta[10];
 
     printf("Olá, Bem-Vindo(a) ao jogo Cartas Super Trunfo!\n");                 //Início dos comandos e das entradas de dados.
@@ -22,7 +22,7 @@ int main(){                                                                     
     printf("O nome da cidade: ");
     scanf("%s", &nome_cidade);
 
-    printf("A quantidade de cidadões: ");
+    printf("A quantidade de cidadãos: ");
     scanf("%f", &populacao);
 
     printf("Quantos km² tem: ");
@@ -32,8 +32,13 @@ int main(){                                                                     
     scanf("%f", &PIB);
 
     printf("Por ultimo, a quantidade de pontos turísticos: ");
-    scanf("%f", &pontos_turisticos);
+    scanf("%d", &pontos_turisticos);
     printf("\n");
+
+    
+    float densidade_p = populacao / area;
+    float pib_per_cap = PIB / populacao;                  //Acrescentando novas variáveis do nivél Aventureiro e seus cálculos
+
 
     printf("Agora vamos as Cartas\n");                                  //Aqui vai ser aonde vai começar a ser exibido os dados que foram determinados.
     printf("\n");
@@ -52,9 +57,14 @@ int main(){                                                                     
 
     printf("PIB (Produto Interno Bruto): R$%.2f\n", PIB);
 
-    printf("Quantidade de pontos turísticos: %.0f\n", pontos_turisticos);
+    printf("Quantidade de pontos turísticos: %d\n", pontos_turisticos);
+
+    printf("Densidade Populacional: %.2f Hab/Km²\n", densidade_p);
+
+    printf("PIB per capita: R$%.2f\n", pib_per_cap);
     printf("\n");
-    printf("\n");                                                       //E aqui é onde termina os dados que foram determinados
+    printf("\n");
+
 
 
     printf("Deseja jogar novamente? ");                                  //Aqui eu não sabia o que fazer, então decidi fazer uma espécie de ""Round 2""
@@ -65,7 +75,7 @@ int main(){                                                                     
 
     
     
-    printf("Escolha o estado (A à H): ");                                 //Recomeçando os dados
+    printf("Escolha o estado (A à H): ");
     scanf("%s", &estado);
 
     printf("Escolha um código da carta (A01 à A04): ");
@@ -74,7 +84,7 @@ int main(){                                                                     
     printf("O nome da cidade: ");
     scanf("%s", &nome_cidade);
 
-    printf("A quantidade de cidadões: ");
+    printf("A quantidade de cidadãos: ");
     scanf("%f", &populacao);
 
     printf("Quantos km² tem: ");
@@ -84,10 +94,15 @@ int main(){                                                                     
     scanf("%f", &PIB);
 
     printf("Por ultimo, a quantidade de pontos turísticos: ");
-    scanf("%f", &pontos_turisticos);
+    scanf("%d", &pontos_turisticos);
     printf("\n");
 
-    printf("Agora vamos as Cartas\n");                                  //Aqui vai ser aonde vai começar a ser exibido os dados que foram determinados.
+
+    densidade_p = populacao / area;
+    pib_per_cap = PIB / populacao;
+
+
+    printf("Agora vamos as Cartas\n");
     printf("\n");
 
     printf("Carta 1\n");
@@ -104,14 +119,11 @@ int main(){                                                                     
 
     printf("PIB (Produto Interno Bruto): R$%.2f\n", PIB);
 
-    printf("Quantidade de pontos turísticos: %.0f\n", pontos_turisticos);
-    printf("\n");
-    printf("\n");                                                        //E aqui é onde termina os dados que foram determinados
+    printf("Quantidade de pontos turísticos: %d\n", pontos_turisticos);
 
+    printf("Densidade Populacional: %.2f Hab/Km²\n", densidade_p);
 
-    //Se tudo der certo, vai ser possível colocar os dados de duas cartas sem reiniciar a linha de códigos.
-
-    //Fiz esse programa no Visual Studio, por que no GitHub estava dando erro toda vez
+    printf("PIB per capita: R$%.2f\n", pib_per_cap);
 
     return 0;
 
